@@ -31,7 +31,7 @@ class Rec:
         d = {'Консервативный': 0.001, 'Умеренный': 0.05, 'Рискованный': 0.1}
         self.val = d[risk]
 
-        with open('shares (3).csv', encoding="utf-8") as csv_file:
+        with open('shares.csv', encoding="utf-8") as csv_file:
             r = sorted(csv.DictReader(csv_file, delimiter=','), key=lambda x: x['tickers'])
             self.names = {i['tickers']: i['name'] for i in r}
             self.tickers = [i['tickers'] for i in r]

@@ -18,7 +18,7 @@ from states.state import Func
 @dp.message_handler(state=Func.func)
 async def risk(message: types.Message, state: FSMContext):
     if message.text == 'Аналитика инструментов':
-        an = Analysis('shares (3).csv', 1)
+        an = Analysis('shares.csv', 1)
         text = '✅ Цена акций на данный момент:\n    {}\n\n' \
                '✅ Cредняя годовая доходность:\n    {}\n\n' \
                '✅ Дивидентный доход:\n    {}\n\n' \
